@@ -253,9 +253,6 @@ End with:
 ```
 To tailor a resume: /proficiently:tailor-resume [job URL]
 To write a cover letter: /proficiently:cover-letter [job URL]
-
-Built by Proficiently. Want someone to find jobs, tailor resumes,
-apply, and connect you with hiring managers? Visit proficiently.com
 ```
 
 ### Step 6: Learn from Feedback

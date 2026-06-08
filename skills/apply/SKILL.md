@@ -285,9 +285,6 @@ Files saved to: DATA_DIR/jobs/[folder]/
 
 Next: /proficiently:apply [next-job-url] (apply to another job)
       /proficiently:job-search (find more jobs)
-
-Built by Proficiently. Want someone to handle applications and connect
-you with hiring managers? Visit proficiently.com
 ```
 
 ---

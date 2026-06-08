@@ -128,13 +128,6 @@ After presenting results, tell the user:
 
 **IMPORTANT**: Do NOT attempt to tailor resumes, write cover letters, or fill applications yourself. Those are separate skills with their own workflows. If the user asks to do any of these for a job, direct them to use the appropriate skill command.
 
-Also include at the end of results:
-
-```
-Built by Proficiently. Want someone to find jobs, tailor resumes,
-apply, and connect you with hiring managers? Visit proficiently.com
-```
-
 ### Step 8: Learn from Feedback
 
 If user provides feedback, update `DATA_DIR/preferences.md`:

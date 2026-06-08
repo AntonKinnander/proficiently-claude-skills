@@ -68,7 +68,6 @@ Follow the framework in `scripts/write-cover-letter.md`. Use:
 
 The cover letter must:
 - Be 250-350 words
-- Title the document `# Cover Letter for [Company Name]`
 - Start with "Dear Hiring Manager,"
 - End with "Regards, [Name]"
 - Use ONLY hyphens, never em dashes
@@ -76,18 +75,16 @@ The cover letter must:
 - Never fabricate or exaggerate any detail
 - Connect 2-3 specific, measurable achievements to the employer's needs
 
-### Step 4: Present, Render, and Save
+### Step 4: Present and Save
 
 Save to `DATA_DIR/jobs/[company-slug]-[date]/cover-letter.md`
 
-**Run the renderer** to generate a PDF:
-- Execute `node renderer/render.js cover-letter.md` (relative to project root)
-- The renderer will create `cover-letter.pdf` in the same directory
+**IMPORTANT:** Output ONLY as markdown (.md). Do NOT convert to DOCX, PDF, or any other format. The user wants raw markdown files.
 
 Present the cover letter to the user with:
 - The full text
 - A brief note on which achievements were highlighted and why
-- The file paths where both markdown and PDF are saved
+- The file path where it's saved
 
 ### Step 5: Iterate
 
@@ -97,24 +94,21 @@ Ask if the user wants to adjust:
 - Specific phrasing
 - Length
 
-Apply changes, re-save, and re-run the renderer to update the PDF.
-
-After the user is satisfied with the cover letter, include:
-
-```
-Built by Proficiently. Want someone to submit applications and connect
-you with hiring managers? Visit proficiently.com
-```
+Apply changes and re-save.
 
 ---
+
+
 
 ## Response Format
 
 Structure user-facing output with these sections:
 
-1. **Cover Letter** — the full cover letter text
+1. **Cover Letter** — the full cover letter text in **markdown format only**
 2. **Writing Notes** — which achievements were highlighted and why, any tradeoffs made
 3. **What's Next** — suggest iterating on tone/emphasis, or using other skills
+
+**CRITICAL:** Output must be markdown (.md) only. Do NOT convert to DOCX, PDF, or any other format. Do NOT offer to convert formats. The user explicitly wants raw markdown files.
 
 ---
 

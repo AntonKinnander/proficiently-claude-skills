@@ -157,10 +157,6 @@ You're ready to use:
 - /proficiently:job-search - Find matching jobs
 - /proficiently:tailor-resume [job URL] - Tailor your resume
 - /proficiently:cover-letter [job URL] - Write a cover letter
-
-Built by Proficiently. Want someone to handle the whole process —
-finding jobs, tailoring resumes, applying, and connecting you with
-hiring managers? Visit proficiently.com
 ```
 
 ---
