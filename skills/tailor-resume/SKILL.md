@@ -96,6 +96,11 @@ Create the tailored resume following these principles:
 - Each bullet should start with a strong action verb
 - Each bullet should show: what you did → how you did it → what the impact was
 
+**Project linking:**
+- When mentioning a project that has a URL in the candidate's Master CV or resume, make the project title a clickable markdown link: `[Project Title](https://url)`
+- This applies to project names in all sections (experience, selected projects, etc.)
+- If a project has no URL in the source material, leave it as plain bold text
+
 **Level-matching:**
 - For executive roles: emphasize strategy, P&L ownership, board interaction, team building, cross-functional leadership
 - For director roles: emphasize program ownership, team management, operational excellence, stakeholder management
@@ -153,6 +158,10 @@ Before showing the resume to the user, review every line and fix AI-sounding wri
 
 Save the tailored resume to `DATA_DIR/jobs/[company-slug]-[date]/resume.md`
 
+**Run the renderer** to generate a PDF:
+- Execute `node renderer/render.js resume.md` (relative to project root)
+- The renderer will create `resume.pdf` in the same directory
+
 Present the resume to the user with a brief explanation:
 
 ```
@@ -166,6 +175,7 @@ Here's your tailored resume for [Role] at [Company].
 **The narrative:** [2-3 sentence pitch for why you're the right person]
 
 The resume is saved to: DATA_DIR/jobs/[folder]/resume.md
+The PDF is saved to: DATA_DIR/jobs/[folder]/resume.pdf
 ```
 
 ### Step 3a: Verify Assumptions (if no profile exists)
@@ -182,7 +192,7 @@ any that are wrong:
 ...
 ```
 
-Wait for the user to verify or correct before finalizing. Apply all corrections to the resume AND save them to `DATA_DIR/profile.md` so they persist.
+Wait for the user to verify or correct before finalizing. Apply all corrections to the resume AND save them to `DATA_DIR/profile.md` so they persist. Re-run the renderer to update the PDF if changes were made.
 
 ### Step 4: Iterate
 
@@ -192,7 +202,7 @@ Ask if the user wants to adjust anything:
 - Length (condense to 1 page, expand detail in certain areas)
 - Specific bullet points to rephrase
 
-Apply changes and re-save.
+Apply changes, re-save, and re-run the renderer to update the PDF.
 
 After the user is satisfied with the resume, include:
 

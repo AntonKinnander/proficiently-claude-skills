@@ -87,6 +87,7 @@ These rules are non-negotiable:
 - **Never add cross-functional partners** not mentioned. If the resume lists "Marketing and Sales," don't add "Operations" or "Legal."
 - **When reframing, only reframe what exists**. You can reorder bullets, change wording, and mirror job posting language, but every claim must trace back to a specific fact from the source materials.
 - **If something is ambiguous, use conservative language** or omit it. Better to understate than overstate.
+- **When a project from the source resume has an associated URL (live site, portfolio page, etc.), render its title as a markdown link: `[Project Title](https://url)`. Do not invent URLs.**
 
 ## Quality Checks
 

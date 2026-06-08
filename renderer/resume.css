@@ -1,0 +1,218 @@
+/* ── resume.css ─────────────────────────────────────────────
+   Shared stylesheet for both hand-authored HTML resumes
+   and Markdown-rendered resumes.  Selectors target both
+   class-based markup (.title, .section, .body, .bold, …)
+   AND plain semantic HTML (h1, h2, h3, p, strong, em, a).
+   ──────────────────────────────────────────────────────── */
+
+/* ── Fonts ───────────────────────────────────────────── */
+@font-face {
+  font-family: 'Respondent';
+  src: url('Assets/respondent/RespondentBold_PERSONAL_USE_ONLY.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Respondent';
+  src: url('Assets/respondent/RespondentMedium_PERSONAL_USE_ONLY.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* ── Reset & base ────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 11pt;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  color: #1a1a1a;
+  line-height: 1.5;
+  max-width: 170mm;
+  margin: 0 auto;
+  padding: 20mm;
+}
+
+/* ── Title (h1) — Respondent Bold ────────────────────── */
+h1,
+h1.title {
+  font-family: 'Respondent', cursive;
+  font-weight: 700;
+  font-size: 32pt;
+  line-height: 1.15;
+  color: #111;
+  margin-bottom: 4pt;
+}
+
+/* ── Description line ────────────────────────────────── */
+p.description,
+h1+p {
+  /* first paragraph after h1 in md */
+  font-size: 10pt;
+  color: #555;
+  margin-bottom: 16pt;
+}
+
+/* ── Horizontal rules (used as visual separators in md) */
+hr {
+  display: none;
+  border: none;
+  border-top: 0.5pt solid #ccc;
+  margin: 14pt 0;
+}
+
+hr:first-of-type {
+  display: block;
+}
+
+/* ── Section headings — toned-down color, slightly larger */
+h2,
+h2.section {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 13pt;
+  color: #3a3a3a;
+  margin-top: 18pt;
+  margin-bottom: 6pt;
+  border-bottom: 0.5pt solid #ccc;
+  padding-bottom: 3pt;
+}
+
+h3,
+h3.section {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 11.5pt;
+  color: #444;
+  margin-top: 12pt;
+  margin-bottom: 4pt;
+}
+
+/* ── Body text ───────────────────────────────────────── */
+p,
+p.body,
+li,
+li.body {
+  font-size: 11pt;
+  margin-bottom: 4pt;
+}
+
+ul {
+  list-style: disc;
+  padding-left: 18pt;
+  margin-bottom: 6pt;
+}
+
+li,
+li.body {
+  margin-bottom: 2pt;
+}
+
+/* ── Inline styles ───────────────────────────────────── */
+strong,
+.bold {
+  font-weight: bold;
+}
+
+em,
+.italic {
+  font-style: italic;
+}
+
+/* URLs — clickable links */
+a,
+a.url {
+  color: #1a5276;
+  text-decoration: none;
+}
+
+a:hover,
+a.url:hover {
+  text-decoration: underline;
+}
+
+/* ── Closing Statement & Sign-off ─────────────────────── */
+.closing-block {
+  margin-top: 0;
+  margin-bottom: -15mm;
+  /* Reclaims 15mm from the 20mm page margin specifically on the last page */
+  page-break-inside: avoid;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.sign-off-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.closing-statement {
+  margin-bottom: 0;
+}
+
+.closing-statement p:last-child {
+  margin-bottom: 0;
+}
+
+/* ── Signature / stamp block ─────────────────────────── */
+.sign-off-name {
+  font-family: 'Respondent', cursive;
+  font-weight: 500;
+  font-size: 31pt;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-top: 16pt;
+  margin-bottom: 0;
+}
+
+.sign-off-stamp {
+  margin-bottom: 0pt;
+  /* Visually align with bottom descenders of signature */
+}
+
+.sign-off-stamp img {
+  height: 77pt;
+  width: auto;
+  display: block;
+}
+
+/* ── Print / PDF rules ───────────────────────────────── */
+@page {
+  size: A4;
+  margin: 20mm;
+}
+
+@media print {
+  body {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a,
+  a.url {
+    color: #1a5276;
+    text-decoration: none;
+  }
+
+  .experience-entry {
+    page-break-inside: avoid;
+  }
+
+  h2,
+  h2.section,
+  h3,
+  h3.section {
+    page-break-after: avoid;
+  }
+}

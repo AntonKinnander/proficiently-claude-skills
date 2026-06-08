@@ -1,0 +1,14 @@
+{
+  "name": "resume-renderer",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Render HTML resume templates to A4 PDF via Puppeteer",
+  "scripts": {
+    "render": "node render.js"
+  },
+  "dependencies": {
+    "marked": "^15.0.12",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^22.15.0"
+  }
+}

@@ -47,6 +47,9 @@ You will receive:
 ---
 
 ## Structure
+- **Document title**: The cover letter file must begin with a top-level heading: `# Cover Letter for [Company Name]`
+  - Use the company's display name (e.g., "Cover Letter for Kurppa Hosk")
+  - This heading comes before "Dear Hiring Manager,"
 - **Start with "Dear Hiring Manager,"**
 - **End with "Regards, [Name]"**
 - **No additional headers or footers**
@@ -58,6 +61,12 @@ You will receive:
 3. **Closing (2-3 sentences)**: A clear statement of mutual benefit that sounds like the end of a real conversation.
 
 **Total length**: 250-350 words. Vary paragraph lengths intentionally for natural flow.
+
+---
+
+## Project Links
+- **When referencing a project that has a URL in the candidate's resume or Master CV, use a clickable markdown link: `[Project Title](https://url)`**
+- **Only link projects that have URLs in the source material. Never invent URLs.**
 
 ---
 

@@ -1,0 +1,143 @@
+/* Cover Letter Styles - A4 Letter Format */
+
+@page {
+  size: A4;
+  margin: 25mm;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11pt;
+  line-height: 1.4;
+  color: #1a1a1a;
+  max-width: 165mm;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Sender info at top */
+.letter-header {
+  margin-bottom: 30pt;
+  text-align: left;
+}
+
+.letter-header .sender-name {
+  font-family: 'Respondent', sans-serif;
+  font-weight: 700;
+  font-size: 14pt;
+  margin-bottom: 4pt;
+}
+
+.letter-header .sender-contact {
+  font-size: 10pt;
+  color: #555;
+}
+
+/* Date */
+.letter-date {
+  margin-bottom: 20pt;
+  font-size: 11pt;
+}
+
+/* Recipient info */
+.letter-recipient {
+  margin-bottom: 20pt;
+  font-size: 11pt;
+}
+
+.letter-recipient .recipient-name {
+  font-weight: bold;
+}
+
+/* Salutation */
+.letter-salutation {
+  margin-bottom: 12pt;
+  font-size: 11pt;
+}
+
+/* Body paragraphs */
+.letter-body p {
+  margin-bottom: 10pt;
+  text-align: justify;
+  text-indent: 0;
+}
+
+.letter-body {
+  margin-bottom: 30pt;
+}
+
+/* Closing signature block */
+.letter-closing {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 40pt;
+  gap: 20mm;
+}
+
+.letter-closing .closing-text {
+  flex: 1;
+}
+
+.letter-closing .closing-text p {
+  margin: 0 0 8pt 0;
+}
+
+.letter-closing .signature-name {
+  font-family: 'Respondent', sans-serif;
+  font-weight: 700;
+  font-size: 12pt;
+}
+
+.letter-closing .signature-stamp {
+  flex-shrink: 0;
+}
+
+.letter-closing .signature-stamp img {
+  width: 40mm;
+  height: auto;
+}
+
+/* Headings in cover letter (rare but possible) */
+.letter-body h1,
+.letter-body h2 {
+  font-family: 'Respondent', sans-serif;
+  font-weight: 700;
+  font-size: 12pt;
+  margin-top: 12pt;
+  margin-bottom: 8pt;
+  color: #1a1a1a;
+}
+
+/* Links */
+a {
+  color: #1a1a1a;
+  text-decoration: underline;
+}
+
+/* Print-specific */
+@media print {
+  body {
+    width: 100%;
+    max-width: none;
+  }
+
+  .letter-closing {
+    page-break-inside: avoid;
+  }
+}
+
+/* Font embedding - same as resume.css */
+@font-face {
+  font-family: 'Respondent';
+  src: url('Assets/respondent/Respondent-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Respondent';
+  src: url('Assets/respondent/Respondent-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}

@@ -68,6 +68,7 @@ Follow the framework in `scripts/write-cover-letter.md`. Use:
 
 The cover letter must:
 - Be 250-350 words
+- Title the document `# Cover Letter for [Company Name]`
 - Start with "Dear Hiring Manager,"
 - End with "Regards, [Name]"
 - Use ONLY hyphens, never em dashes
@@ -75,14 +76,18 @@ The cover letter must:
 - Never fabricate or exaggerate any detail
 - Connect 2-3 specific, measurable achievements to the employer's needs
 
-### Step 4: Present and Save
+### Step 4: Present, Render, and Save
 
 Save to `DATA_DIR/jobs/[company-slug]-[date]/cover-letter.md`
+
+**Run the renderer** to generate a PDF:
+- Execute `node renderer/render.js cover-letter.md` (relative to project root)
+- The renderer will create `cover-letter.pdf` in the same directory
 
 Present the cover letter to the user with:
 - The full text
 - A brief note on which achievements were highlighted and why
-- The file path where it's saved
+- The file paths where both markdown and PDF are saved
 
 ### Step 5: Iterate
 
@@ -92,7 +97,7 @@ Ask if the user wants to adjust:
 - Specific phrasing
 - Length
 
-Apply changes and re-save.
+Apply changes, re-save, and re-run the renderer to update the PDF.
 
 After the user is satisfied with the cover letter, include:
 
